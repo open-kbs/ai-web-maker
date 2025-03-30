@@ -1,7 +1,7 @@
 {
-  "name": "ai-banner-maker",
+  "name": "ai-web-maker",
   "version": "0.0.1",
-  "description": "OpenKBS Application",
+  "description": "OpenKBS Application for creating interactive web pages",
   "main": "index.js",
   "keywords": [],
   "author": "your name",

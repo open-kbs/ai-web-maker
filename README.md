@@ -1,18 +1,18 @@
-# AI Banner Maker &middot; [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/open-kbs/ai-banner-maker/blob/main/LICENSE)
+# AI Web Maker &middot; [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/open-kbs/ai-web-maker/blob/main/LICENSE)
 <table>
   <tr>
     <td>
       <img src="app/icon.png" alt="App Icon" style="width: 100px; margin-right: 10px;">
     </td>
     <td>
-      <strong>An AI app that creates interactive HTML banners with forms to collect information from clients, such as survey forms and more.</strong>
+      <strong>An AI app that creates interactive web pages with forms to collect information from clients, such as survey forms and more.</strong>
     </td>
   </tr>
 </table>
 
 <br />
 
-## OpenKBS + GrapesJS = AI HTML Banner Maker
+## OpenKBS + GrapesJS = AI Web Maker
 
 <p float="left">
   <img src="app/screenshots/1.png" width="256" />
@@ -41,8 +41,8 @@ If you do not have npm installed, you can check https://github.com/open-kbs/open
 Clone the repository to your local machine:
 
 ```bash
-git clone git@github.com:open-kbs/ai-banner-maker.git
-cd ai-banner-maker
+git clone git@github.com:open-kbs/ai-web-maker.git
+cd ai-web-maker
 ```
 
 ### Step 3: Deploy the Application to the OpenKBS Cloud (to run our backend services locally - check steps 4,5,6):
@@ -80,9 +80,9 @@ To run this AI app on your own GPU with Llama 3.1 and Stable Diffusion 3, read m
 
 
 ## Install via WEB
-To install this app via our website visit [AI Banner Maker](https://openkbs.com/apps/ai-banner-maker/)
+To install this app via our website visit [AI Web Maker](https://openkbs.com/apps/ai-web-maker/)
 
 
 ## License
 
-This project is licensed under the MIT License. For more details, please refer to the [LICENSE](https://github.com/open-kbs/ai-banner-maker/blob/main/LICENSE) file.
+This project is licensed under the MIT License. For more details, please refer to the [LICENSE](https://github.com/open-kbs/ai-web-maker/blob/main/LICENSE) file.

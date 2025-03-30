@@ -19,9 +19,9 @@ export const addBlocks = ({editor, KB}) => {
     `
     });
 
-    // Promotion Banner Block
+    // Promotion Web Block
     bm.add('promo-banner', {
-        label: 'Promo Banner',
+        label: 'Promo Web',
         category,
         media: `
         <svg viewBox="0 0 64 64" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
