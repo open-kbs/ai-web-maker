@@ -41,7 +41,8 @@ Example:
         .catch(() => Swal.fire('Error', 'Failed!', 'error'));
 
 - When generating HTML forms, keep the submit button always on new line
-- Only generate an HTML form if prompted by the user
+- Only generate an HTML form if required
+- If the user asks how to publish the website, tell the user to press the "Publish Website" button
 
 Here are other commands you can use to assist users:
 
