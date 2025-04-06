@@ -25,7 +25,7 @@ const GrapesJSEditor = ({ htmlContent, params }) => {
     const editorRef = useRef(null);
     const [grapesjs, setGrapesjs] = useState(null);
     const { msgIndex, messages, setMessages, chatAPI, KB, uploadFileAPI, setBlockingLoading, blockAutoscroll,
-    setInputValue, sendButtonRippleRef } = params;
+        setInputValue, sendButtonRippleRef } = params;
 
     const currentHTMLContentRef = useRef(htmlContent);
     const isLocalContentUpdate = useRef(false);
@@ -183,7 +183,7 @@ const GrapesJSEditor = ({ htmlContent, params }) => {
             editor.on('block:drag:stop', (component, block) => {
                 if (block && component && !block.get('id')?.startsWith('image')) {
                     blockAutoscroll(0);
-                    const msg = `Make the "${block.get('label')}" a natural part of this banner in terms of style, colors, content and design.`;
+                    const msg = `Make the "${block.get('label')}" a natural part of this website in terms of style, colors, content and design.`;
                     setInputValue(prev => prev ? prev + msg : msg )
                     setTimeout(() => sendButtonRippleRef?.current?.pulsate(), 100)
                 }
@@ -234,24 +234,25 @@ const GrapesJSEditor = ({ htmlContent, params }) => {
             </div>
             {grapesjs && (
                 <>
-                    <Tooltip title={dragMode === 'translate' ? 'Disable drag mode' : 'Enable drag mode'} placement={'top'}>
-                        <IconButton
-                            onClick={handleDragModeToggle}
-                            aria-label="drag mode"
-                            style={{ position: 'absolute', top: 38, left: 42, zIndex: 100, color: dragMode === 'translate' ? '#D97AA6' : '#B9A5A6' }}
-                        >
-                            <OpenWith style={{ fontSize: 24 }} />
-                        </IconButton>
-                    </Tooltip>
-                    <Tooltip title="Open Live Page" placement={'top'}>
-                        <IconButton
-                            onClick={handlePreviewClick}
-                            aria-label="preview mode"
-                            style={{ position: 'absolute', top: 38, left: 10, zIndex: 100, color: '#B9A5A6' }}
-                        >
-                            <Preview style={{ fontSize: 24 }} />
-                        </IconButton>
-                    </Tooltip>
+                    <button
+                        onClick={handlePreviewClick}
+                        style={{
+                            position: 'absolute',
+                            top: 45,
+                            left: 20,
+                            zIndex: 100,
+                            color: '#ffffff',
+                            backgroundColor: '#D97AA6',
+                            padding: '3px 12px',
+                            height: '28px',
+                            border: 'none',
+                            borderRadius: '4px',
+                            fontWeight: 'bold',
+                            cursor: 'pointer'
+                        }}
+                    >
+                        Publish Website
+                    </button>
                 </>
             )}
             <div ref={editorContainerRef} style={{ paddingTop: 14 }}></div>
