@@ -275,17 +275,13 @@ const Header = ({ setRenderSettings }) => {
         window.openkbs.disableDropzone = []
         setRenderSettings({
             setMessageWidth: (content) => isContentHTML(content) ? '90%' : undefined,
-            enableGenerationModelsSelect: true,
+            enableGenerationModelsSelect: false,
             disableShareButton: true,
-            disableBalanceView: true,
+            disableBalanceView: false,
             disableSentLabel: false,
             disableChatAvatar: false,
             disableChatModelsSelect: false,
             disableContextItems: true,
-            disableCopyButton: false,
-            disableEmojiButton: false,
-            disableTextToSpeechButton: false,
-            disableMobileLeftButton: false,
         });
     }, [setRenderSettings]);
 
