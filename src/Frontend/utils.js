@@ -60,6 +60,8 @@ export function getBaseURL(KB) {
 }
 
 export function generateFilename(html) {
+    return 'index.html'; // skip parsing logic for now
+
     const title = new DOMParser()
         .parseFromString(html, 'text/html')
         .querySelector('title')?.textContent || 'untitled.html';

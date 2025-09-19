@@ -51,52 +51,21 @@ Description: """
 Use this API to extract the title, description, price, and image from a webpage.
 """
 
-/textToImage("image prompt", "negative image prompt")
+/textToImage("image prompt", "size")
 Description: """
-Generates images by text prompt (English only supported) and returns the image url
-Negative image prompt is optional, it excludes unwanted elements from the images
+It leverage its broad world knowledge to generate images with great instruction following and contextual awareness
+When possible, include brand names or company names in the visual elements of the generated image.
 
-Concise Prompt Guide for Text-to-Image Models:
+Available sizes (second parameter is optional):
+- "1024x1024" (square) - default if no size specified
+- "1536x1024" (landscape)
+- "1024x1536" (portrait)
+- "auto" (automatic sizing based on content)
 
-A good prompt needs to be detailed and specific, a good process is to look through a list of keyword components and decide whether you want to use any of them
-
-Key Components of a Good Prompt:
-1. Subject: Clearly define the main focus, including details like age, gender, and distinctive features. Example: "A powerful sorceress casting lightning magic."
-2. Medium: Specify the artistic medium, such as digital art, oil painting, or photography. Example: "Digital art"
-3. Style: Indicate the artistic style, like hyperrealistic, fantasy, or surrealist. Example: "Fantasy"
-4. Composition: Describe the arrangement, pose, and framing of the subject. Example: "Sitting on a rock with a castle in the background"
-5. Lighting: Define the type and quality of light, such as studio lighting or golden hour. Example: "Studio lighting"
-6. Color Palette: Specify dominant colors or a color scheme. Example: "Iridescent gold"
-7. Resolution and Detail: Indicate desired sharpness and detail level. Example: "Highly detailed"
-8. Mood/Atmosphere: Convey the emotional tone or ambiance. Example: "Dark and mysterious"
-9. Additional Elements: Include supporting details or background information. Example: "Detailed leather clothing with gemstones"
-10. Artistic References: Reference specific artists or styles to guide the output. Example: "In the style of Vincent van Gogh"
-11. Website Influence: Mention websites like Artstation to influence style. Example: "Artstation"
-
-Prompt Crafting Techniques
-- Be Specific and Descriptive: Provide detailed information to guide the model.
-- Blend Concepts: Combine different ideas for unique images.
-- Use Contrast: Create striking images by contrasting elements.
-- Incorporate Mood: Describe the emotional tone for desired feel.
-
-Tips for Optimal Results
-- Iterate and Refine: Generate multiple images and refine prompts.
-- Balance Detail and Freedom: Guide the model while allowing creative interpretation.
-- Use Natural Language: Write clear, descriptive prompts.
-- Explore Diverse Themes: Experiment with various subjects.
-
-Common Pitfalls to Avoid
-- Overloading the Prompt: Avoid too many conflicting ideas.
-- Neglecting Composition: Guide overall composition, not just elements.
-- Ignoring Lighting and Atmosphere: These greatly influence mood and realism.
-- Being Too Vague: General prompts may lead to generic results.
-
-Tips to Create Realistic Photos
-- Structure Your Prompts: Subject, description of the subject {hairstyle, skin, cloth, props, poses}, environment, {other important features}, composition, lighting, camera {angles, camera properties}, by [photographer], quality keywords.
-- Incorporate keywords: Incorporate keywords like (DSLR camera, RAW photo, analog style) to guide the model. Including specific camera brands such as "Fujifilm" or "Sony"
-- Use Effective Negative Prompts: Including terms like doll,anime,animation,cartoon,render,artwork,semi-realistic,CGI,3d,sketch,drawing and etc.
-- Define the Lighting: Terms like (e.g., dramatic lighting,soft sunlight,golden hour,bokeh and etc.) can guide the model to create images with the desired ambiance
-- Photorealistic Example: "... shot on a professional DSLR camera, ultra-high definition, sharp focus on ..."
+Usage examples:
+/textToImage("description") - creates square image
+/textToImage("description", "1536x1024") - creates landscape image
+/textToImage("description", "1024x1536") - creates portrait image
 """
 
 $InputLabel = """Halloween Bar Event"""

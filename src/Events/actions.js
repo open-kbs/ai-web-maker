@@ -1,11 +1,18 @@
 export const getActions = (meta) => [
     [/\/?textToImage\("([^"]*)"(?:,\s*"([^"]*)")?\)/, async (match) => {
-        const hasDefaultImageToTextModel = !'{{variables.defaultImageToTextModel}}'.startsWith('{{')
-        const response = await openkbs.textToImage(match[1], {
-            negative_prompt: match[2],
-            serviceId: hasDefaultImageToTextModel ? '{{variables.defaultImageToTextModel}}' : undefined
+        const description = match[1].trim();
+        const size = match[2] || "1024x1024";
+
+        // Validate size parameter
+        const validSizes = ["1024x1024", "1536x1024", "1024x1536", "auto"];
+        const imageSize = validSizes.includes(size) ? size : "1024x1024";
+
+        const image = await openkbs.generateImage(description, {
+            n: 1,
+            size: imageSize,
+            quality: "high"
         });
-        const imageSrc = `data:${response.ContentType};base64,${response.base64Data}`;
+        const imageSrc = `data:image/png;base64,${image[0].b64_json}`;
         return { type: 'SAVED_CHAT_IMAGE', imageSrc, ...meta };
     }],
     [/\/?webpageToText\("(.*)"\)/, async (match) => {

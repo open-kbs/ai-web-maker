@@ -276,11 +276,12 @@ const Header = ({ setRenderSettings }) => {
         setRenderSettings({
             setMessageWidth: (content) => isContentHTML(content) ? '90%' : undefined,
             enableGenerationModelsSelect: false,
+            enableCloudSetup: true,
             disableShareButton: true,
             disableBalanceView: false,
             disableSentLabel: false,
             disableChatAvatar: false,
-            disableChatModelsSelect: false,
+            disableChatModelsSelect: true,
             disableContextItems: true,
         });
     }, [setRenderSettings]);
